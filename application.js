@@ -3,10 +3,11 @@ var inputText = document.querySelector('#input-text');
 var outputText = document.querySelector("#output-text");
 
 function getTranslationText(text){
+  var texte = text.toLowerCase();
   outputText.innerTex ="";
   for(var i = 0; i < words.length; i++)
   {
-    if(words[i].word.fr == text)
+    if(words[i].word.fr == texte)
     {
       outputText.innerText = words[i].word.wo;
       return;
