@@ -6,7 +6,7 @@ var outputText = document.querySelector("#output-text");
 function getTranslationText(text){
   var texte ="";
   var textnode = "<ol>";
-  texte = text.toLowerCase();
+  texte = text.toLowerCase().trim();
   outputText.innerText ="";
   for(var i = 0; i < words.length; i++)
   {
@@ -68,7 +68,7 @@ words =
     {"word" : { "fr" : "dix-neuf", "wo" : "fukk ak juróom-ñeent"}},
     {"word" : { "fr" : "vingt", "wo" : "ñaar-fukk"}},
     {"word" : { "fr" : "vingt-six", "wo" : "ñaar-fukk ak juróom-benn"}},
-    // {"word" : { "fr" : "trente", "wo" : ["ñett-fukk" ,"fanweer"]}},
+    {"word" : { "fr" : "trente", "wo" : ["ñett-fukk" ,"fanweer"]}},
     {"word" : { "fr" : "quarante", "wo" : "ñeent-fukk"}},
     {"word" : { "fr" : "cinquante", "wo" : "juróom-fukk"}},
     {"word" : { "fr" : "soixante", "wo" : "juróom-benn-fukk"}},
@@ -88,7 +88,7 @@ words =
     {"word" : { "fr" : "sept cent", "wo" : "juróom-ñaari téeméer"}},
     {"word" : { "fr" : "huit cent", "wo" : "juróom-ñetti téeméer"}},
     {"word" : { "fr" : "neuf cent", "wo" : "juróom-ñeenti téeméer"}},
-    // {"word" : { "fr" : "mille", "wo" : ["junni", "junne"]}},
+    {"word" : { "fr" : "mille", "wo" : ["junni", "junne"]}},
     {"word" : { "fr" : "mille cent", "wo" : "junni ak téeméer"}},
     {"word" : { "fr" : "mille six cent", "wo" : "junni ak juróom-benni téeméer"}},
     {"word" : { "fr" : "mille neuf cent quarante cinq", "wo" : "junni ak juróom-ñeenti téeméer ak ñeent-fukk ak juróom"}},
@@ -103,7 +103,7 @@ words =
     {"word" : { "fr" : "neuf mille", "wo" : "juróom-ñeenti junni"}},
     {"word" : { "fr" : "dix mille", "wo" : "fukki junni"}},
     {"word" : { "fr" : "cent mille", "wo" : "téeméeri junni"}},
-    // {"word" : { "fr" : "million", "wo" : ["tamndareet", "million"]}},
+    {"word" : { "fr" : "million", "wo" : ["tamndareet", "million"]}},
     {"word" : { "fr" : "onze", "wo" : "fukk ak benn"}},
     {"word" : { "fr" : "douze", "wo" : "fukk ak ñaar"}},
     {"word" : { "fr" : "treize", "wo" : "fukk ak ñett"}},
@@ -120,7 +120,7 @@ words =
     {"word" : { "fr" : "10th", "wo" : "fukkéél"}},
     {"word" : { "fr" : "text_french1", "wo" : "Mangi fii (rekk)."}},
     {"word" : { "fr" : "text_french2", "wo" : "Yaangi ci jamm?"}},
-    // {"word" : { "fr" : "text_french", "wo" : ["jamm rekk, Alxamdulilaay"]}},
+    {"word" : { "fr" : "text_french4", "wo" : ["jamm rekk, Alxamdulilaay"]}},
     {"word" : { "fr" : "text_french3", "wo" : "Ana sa waa ker?"}},
     {"word" : { "fr" : "text_french4", "wo" : "Ñunga fa."}},
     {"word" : { "fr" : "text_french5", "wo" : "(Bi) Ñaata (la)?"}},
