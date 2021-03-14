@@ -4,8 +4,11 @@ var outputText = document.querySelector("#output-text");
 
 
 function getTranslationUrl(text){
-    translated = "naga def"
-    outputText.innerText = translated
+  if (test =="bonjour" || test =="Bonjour" || test =="Hello" || test =="こんにちは" ){
+    outputText.innerText = "naga def"
+  }else{
+    outputText.innerText = "We try.	On essaye"
+  }
     return;
 }
 
