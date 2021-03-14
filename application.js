@@ -23,8 +23,7 @@ function getTranslationText(text){
   }
   textnode += "</ol>";
   document.getElementById("list").innerHTML = textnode;
-  // node.appendChild(textnode);
-  outputText.innerText ="We try. on essaye . danniy essayer . 試しに";
+  outputText.innerText ="Try again!";
 
   return false;
 }
