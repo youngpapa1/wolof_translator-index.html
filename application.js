@@ -13,6 +13,7 @@ function getTranslationUrl(text){
       return;
     }
   }
+  return outputText.innerTex ="We try. on essaye . danniy essayer";
 }
 
 function errorHandler(error){
