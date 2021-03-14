@@ -3,7 +3,8 @@ var inputText = document.querySelector('#input-text');
 var outputText = document.querySelector("#output-text");
 
 function getTranslationText(text){
-  var texte = text.toLowerCase();
+  var texte ="";
+  texte = text.toLowerCase();
   outputText.innerTex ="";
   for(var i = 0; i < words.length; i++)
   {
@@ -105,12 +106,12 @@ words =
     {"word" : { "fr" : "8th", "wo" : "juróom-ñettéél"}},
     {"word" : { "fr" : "9th", "wo" : "juróom-ñeentéél"}},
     {"word" : { "fr" : "10th", "wo" : "fukkéél"}},
-    {"word" : { "fr" : "text_french", "wo" : "Mangi fii (rekk)."}},
-    {"word" : { "fr" : "text_french", "wo" : "Yaangi ci jamm?"}},
+    {"word" : { "fr" : "text_french1", "wo" : "Mangi fii (rekk)."}},
+    {"word" : { "fr" : "text_french2", "wo" : "Yaangi ci jamm?"}},
     // {"word" : { "fr" : "text_french", "wo" : ["jamm rekk, Alxamdulilaay"]}},
-    {"word" : { "fr" : "text_french", "wo" : "Ana sa waa ker?"}},
-    {"word" : { "fr" : "text_french", "wo" : "Ñunga fa."}},
-    {"word" : { "fr" : "text_french", "wo" : "(Bi) Ñaata (la)?"}},
+    {"word" : { "fr" : "text_french3", "wo" : "Ana sa waa ker?"}},
+    {"word" : { "fr" : "text_french4", "wo" : "Ñunga fa."}},
+    {"word" : { "fr" : "text_french5", "wo" : "(Bi) Ñaata (la)?"}},
     {"word" : { "fr" : "text_french", "wo" : "Dafa cher/jaffe."}},
     {"word" : { "fr" : "text_french", "wo" : "Waññi ko."}},
     {"word" : { "fr" : "text_french", "wo" : "jërejëf"}},
@@ -118,27 +119,26 @@ words =
     {"word" : { "fr" : "text_french", "wo" : "waaw"}},
     {"word" : { "fr" : "text_french", "wo" : "déedéet"}},
     {"word" : { "fr" : "text_french", "wo" : "Dama xiif."}},
-    {"word" : { "fr" : "text_french", "wo" : "Dama mar."}},
+    {"word" : { "fr" : "text_french9", "wo" : "Dama mar."}},
     {"word" : { "fr" : "text_french", "wo" : "Dama sonn."}},
     {"word" : { "fr" : "text_french", "wo" : "Jamm ngam fanaan?"}},
     {"word" : { "fr" : "text_french", "wo" : "jamm rekk, Alxamdulilaay"}},
     {"word" : { "fr" : "text_french", "wo" : "Naka suba si?"}},
     {"word" : { "fr" : "text_french", "wo" : "Suba si, sangi nii (rekk)."}},
     {"word" : { "fr" : "text_french", "wo" : "ba ci kanam"}},
-    {"word" : { "fr" : "text_french", "wo" : "ba beneen (yoon)"}},
-    {"word" : { "fr" : "text_french", "wo" : "jamm ak jamm"}},
-    {"word" : { "fr" : "Va", "wo" : "text_wolof" }},
-    {"word" : { "fr" : "Cours ", "wo" : "text_wolof" }},
-    {"word" : { "fr" : "Cours ", "wo" : "text_wolof" }},
-    {"word" : { "fr" : "Courez ", "wo" : "text_wolof" }},
-    {"word" : { "fr" : "Ça alors ", "wo" : "text_wolof" }},
+    {"word" : { "fr" : "text_french11", "wo" : "ba beneen (yoon)"}},
+    {"word" : { "fr" : "text_french10", "wo" : "jamm ak jamm"}},
+    {"word" : { "fr" : "Va", "wo" : "text_wolof"}},
+    {"word" : { "fr" : "Cours", "wo" : "text_wolof"}},
+    {"word" : { "fr" : "Courez ", "wo" : "text_wolof"}},
+    {"word" : { "fr" : "Ça alors ", "wo" : "text_wolof"}},
     {"word" : { "fr" : "Au feu ", "wo" : "text_wolof" }},
     {"word" : { "fr" : "À l'aide ", "wo" : "text_wolof" }},
     {"word" : { "fr" : "Saute", "wo" : "text_wolof" }},
     {"word" : { "fr" : "Ça suffit ", "wo" : "text_wolof" }},
     {"word" : { "fr" : "Stop ", "wo" : "text_wolof" }},
     {"word" : { "fr" : "Arrête-toi ", "wo" : "text_wolof" }},
-    {"word" : { "fr" : "Attends ", "wo" : "text_wolof" }},
+    {"word" : { "fr" : "Attends", "wo" : "text_wolof" }},
     {"word" : { "fr" : "Attendez ", "wo" : "text_wolof" }},
     {"word" : { "fr" : "Je comprends", "wo" : "text_wolof" }},
     {"word" : { "fr" : "J'essaye", "wo" : "text_wolof" }},
