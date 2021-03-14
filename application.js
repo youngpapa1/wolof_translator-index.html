@@ -2,7 +2,7 @@ var btnTranslate = document.querySelector("#btn-translate");
 var inputText = document.querySelector('#input-text');
 var outputText = document.querySelector("#output-text");
 
-function getTranslationUrl(text){
+function getTranslationText(text){
   outputText.innerTex ="";
   for(var i = 0; i < words.length; i++)
   {
@@ -23,7 +23,7 @@ function clickEventHandler(){
     // outputText.innerText=inputText.value;
 
     var inputTxt = inputText.value;
-    getTranslationUrl(inputTxt);
+    getTranslationText(inputTxt);
 
 }
 btnTranslate.addEventListener("click",clickEventHandler)
