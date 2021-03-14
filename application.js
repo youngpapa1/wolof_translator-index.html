@@ -2,7 +2,6 @@ var btnTranslate = document.querySelector("#btn-translate");
 var inputText = document.querySelector('#input-text');
 var outputText = document.querySelector("#output-text");
 
-
 function getTranslationUrl(text){
   outputText.innerTex ="";
   for(var i = 0; i < words.length; i++)
@@ -13,7 +12,8 @@ function getTranslationUrl(text){
       return;
     }
   }
-  return outputText.innerTex ="We try. on essaye . danniy essayer";
+  outputText.innerText ="We try. on essaye . danniy essayer";
+  return;
 }
 
 function errorHandler(error){
