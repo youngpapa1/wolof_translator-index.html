@@ -23,7 +23,7 @@ function getTranslationText(text){
   }
   textnode += "</ol>";
   document.getElementById("list").innerHTML = textnode;
-  outputText.innerText ="Try again!";
+  outputText.innerText ="Select a word in this list below!";
 
   return false;
 }
