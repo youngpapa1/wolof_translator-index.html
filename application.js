@@ -2,20 +2,31 @@ var btnTranslate = document.querySelector("#btn-translate");
 var inputText = document.querySelector('#input-text');
 var outputText = document.querySelector("#output-text");
 
+
 function getTranslationText(text){
   var texte ="";
+  var textnode = "<ol>";
   texte = text.toLowerCase();
-  outputText.innerTex ="";
+  outputText.innerText ="";
   for(var i = 0; i < words.length; i++)
   {
-    if(words[i].word.fr == texte)
+    textnode += "<li>" + words[i].word.fr + "</li>";
+
+    if(words[i].word.fr.toLowerCase() == texte)
     {
+      textnode += "</ul>";
+      document.getElementById("list").innerHTML = textnode;
       outputText.innerText = words[i].word.wo;
-      return;
+      return true;
     }
+
   }
+  textnode += "</ol>";
+  document.getElementById("list").innerHTML = textnode;
+  // node.appendChild(textnode);
   outputText.innerText ="We try. on essaye . danniy essayer . 試しに";
-  return;
+
+  return false;
 }
 
 function errorHandler(error){
