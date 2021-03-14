@@ -12,7 +12,7 @@ function getTranslationText(text){
       return;
     }
   }
-  outputText.innerText ="We try. on essaye . danniy essayer";
+  outputText.innerText ="We try. on essaye . danniy essayer . 試しに";
   return;
 }
 
