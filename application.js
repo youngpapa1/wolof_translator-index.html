@@ -42,7 +42,9 @@ btnTranslate.addEventListener("click",clickEventHandler)
 
 words =
   [
-    {"word" : { "fr" : "bonjour", "wo" : "naga def" }},
+    {"word" : { "fr" : "bonjour", "wo" : "naka suba si" }},
+    {"word" : { "fr" : "bonsoir", "wo" : "naka ngon si" }},
+    {"word" : { "fr" : "bonne nuit", "wo" : "ñu fanane ak jamm" }},
     {"word" : { "fr" : "hello", "wo" : "naga def" }},
     {"word" : { "fr" : "こんにちは", "wo" : "naga def" }},
     {"word" : { "fr" : "un", "wo" : "benn" }},
