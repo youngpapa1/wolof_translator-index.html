@@ -1,6 +1,10 @@
 var btnTranslate = document.querySelector("#btn-translate");
+var btnEditer = document.querySelector("#btn-editer");
+var btnSave = document.querySelector("#btn-save");
 var inputText = document.querySelector('#input-text');
 var outputText = document.querySelector("#output-text");
+var wolofText = document.querySelector("#wolof-text");
+var frenchText = document.querySelector("#french-text");
 
 
 function getTranslationText(text){
@@ -22,6 +26,7 @@ function getTranslationText(text){
 
   }
   textnode += "</ol>";
+
   document.getElementById("list").innerHTML = textnode;
   outputText.innerText ="Select a word in this list below!";
 
@@ -38,7 +43,59 @@ function clickEventHandler(){
     getTranslationText(inputTxt);
 
 }
+
+
+function saveEventHandler()
+{
+    var inputWo_Txt = wolofText.value;
+    var inputFr_Txt = frenchText.value;
+    saveText(inputWo_Txt, inputFr_Txt);
+
+}
+
 btnTranslate.addEventListener("click",clickEventHandler)
+btnEditer.addEventListener("click",editTranslationText)
+btnSave.addEventListener("click",saveEventHandler)
+
+function editTranslationText(text_wolof, text_french){
+
+  for(var i = 0; i < words.length; i++)
+  {
+
+    if(words[i].word.fr == "text_french" || words[i].word.wo == "text_wolof")
+    {
+      frenchText.innerText = words[i].word.fr;
+      wolofText.innerText = words[i].word.wo;
+      alert(words[i].word.fr)
+      alert(words[i].word.wo)
+      return true;
+    }
+
+  }
+  return false;
+}
+
+function saveText(inputWo_Txt, inputFr_Txt){
+
+  const data = {fr: inputFr_Txt, wo: inputWo_Txt};              //sample json
+  const a = document.createElement('a');
+  const blob = new Blob([JSON.stringify(data)]);
+  a.href = URL.createObjectURL(blob);
+  a.download = 'edit.txt';                     //filename to download
+  a.click();
+
+  /// write to file
+  var txtFile = "edit.txt";
+  var file = new File([blob], txtFile);
+  var str = "My string of text";
+
+  file.open("w"); // open file with write access
+  file.writeln("First line of text");
+  file.writeln("Second line of text " + str);
+  file.write(str);
+  file.close();
+}
+
 
 words =
   [
@@ -118,12 +175,12 @@ words =
     {"word" : { "fr" : "8th", "wo" : "juróom-ñettéél"}},
     {"word" : { "fr" : "9th", "wo" : "juróom-ñeentéél"}},
     {"word" : { "fr" : "10th", "wo" : "fukkéél"}},
-    {"word" : { "fr" : "text_french1", "wo" : "Mangi fii (rekk)."}},
-    {"word" : { "fr" : "text_french2", "wo" : "Yaangi ci jamm?"}},
-    {"word" : { "fr" : "text_french4", "wo" : ["jamm rekk, Alxamdulilaay"]}},
-    {"word" : { "fr" : "text_french3", "wo" : "Ana sa waa ker?"}},
-    {"word" : { "fr" : "text_french4", "wo" : "Ñunga fa."}},
-    {"word" : { "fr" : "text_french5", "wo" : "(Bi) Ñaata (la)?"}},
+    {"word" : { "fr" : "text_french", "wo" : "Mangi fii (rekk)."}},
+    {"word" : { "fr" : "text_french", "wo" : "Yaangi ci jamm?"}},
+    {"word" : { "fr" : "text_french", "wo" : ["jamm rekk, Alxamdulilaay"]}},
+    {"word" : { "fr" : "text_french", "wo" : "Ana sa waa ker?"}},
+    {"word" : { "fr" : "text_french", "wo" : "Ñunga fa."}},
+    {"word" : { "fr" : "text_french", "wo" : "(Bi) Ñaata (la)?"}},
     {"word" : { "fr" : "text_french", "wo" : "Dafa cher/jaffe."}},
     {"word" : { "fr" : "text_french", "wo" : "Waññi ko."}},
     {"word" : { "fr" : "text_french", "wo" : "jërejëf"}},
@@ -131,15 +188,15 @@ words =
     {"word" : { "fr" : "text_french", "wo" : "waaw"}},
     {"word" : { "fr" : "text_french", "wo" : "déedéet"}},
     {"word" : { "fr" : "text_french", "wo" : "Dama xiif."}},
-    {"word" : { "fr" : "text_french9", "wo" : "Dama mar."}},
+    {"word" : { "fr" : "text_french", "wo" : "Dama mar."}},
     {"word" : { "fr" : "text_french", "wo" : "Dama sonn."}},
     {"word" : { "fr" : "text_french", "wo" : "Jamm ngam fanaan?"}},
     {"word" : { "fr" : "text_french", "wo" : "jamm rekk, Alxamdulilaay"}},
     {"word" : { "fr" : "text_french", "wo" : "Naka suba si?"}},
     {"word" : { "fr" : "text_french", "wo" : "Suba si, sangi nii (rekk)."}},
     {"word" : { "fr" : "text_french", "wo" : "ba ci kanam"}},
-    {"word" : { "fr" : "text_french11", "wo" : "ba beneen (yoon)"}},
-    {"word" : { "fr" : "text_french10", "wo" : "jamm ak jamm"}},
+    {"word" : { "fr" : "text_french", "wo" : "ba beneen (yoon)"}},
+    {"word" : { "fr" : "text_french", "wo" : "jamm ak jamm"}},
     {"word" : { "fr" : "Va", "wo" : "text_wolof"}},
     {"word" : { "fr" : "Cours", "wo" : "text_wolof"}},
     {"word" : { "fr" : "Courez ", "wo" : "text_wolof"}},
