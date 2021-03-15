@@ -76,7 +76,7 @@ function editTranslationText(text_wolof, text_french){
 
 function saveText(inputWo_Txt, inputFr_Txt){
 
-  const data = {fr: inputFr_Txt, wo: inputWo_Txt};              //sample json
+  const data =  { word : { fr : inputFr_Txt, wo : inputWo_Txt}};              //sample json
   const a = document.createElement('a');
   const blob = new Blob([JSON.stringify(data)]);
   a.href = URL.createObjectURL(blob);
@@ -163,7 +163,7 @@ words =
     {"word" : { "fr" : "8th", "wo" : "juróom-ñettéél"}},
     {"word" : { "fr" : "9th", "wo" : "juróom-ñeentéél"}},
     {"word" : { "fr" : "10th", "wo" : "fukkéél"}},
-    {"word" : { "fr" : "text_french", "wo" : "Mangi fii (rekk)."}},
+    {"word" : { "fr" : "Je vais bien","wo" : "Mangi fii (rekk)."}},
     {"word" : { "fr" : "text_french", "wo" : "Yaangi ci jamm?"}},
     {"word" : { "fr" : "text_french", "wo" : ["jamm rekk, Alxamdulilaay"]}},
     {"word" : { "fr" : "text_french", "wo" : "Ana sa waa ker?"}},
