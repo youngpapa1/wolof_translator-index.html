@@ -6,14 +6,6 @@ var outputText = document.querySelector("#output-text");
 var wolofText = document.querySelector("#wolof-text");
 var frenchText = document.querySelector("#french-text");
 
-const fs = require('./require.js');
-
-fs.writeFile('edit.txt', content, error => {
-if (error) {
-console.error(error);
-return;
-}
-
 function getTranslationText(text){
   var texte ="";
   var textnode = "<ol>";
@@ -43,8 +35,8 @@ function getTranslationText(text){
 function errorHandler(error){
     console.log("error occured",error)
 }
+
 function clickEventHandler(){
-    // outputText.innerText=inputText.value;
 
     var inputTxt = inputText.value;
     getTranslationText(inputTxt);
@@ -90,17 +82,6 @@ function saveText(inputWo_Txt, inputFr_Txt){
   a.href = URL.createObjectURL(blob);
   a.download = 'edit.txt';                     //filename to download
   a.click();
-
-  /// write to file
-  var txtFile = "edit.txt";
-  var file = new File([blob], txtFile);
-  var str = "My string of text";
-
-  file.open("w"); // open file with write access
-  file.writeln("First line of text");
-  file.writeln("Second line of text " + str);
-  file.write(str);
-  file.close();
 }
 
 
@@ -108,7 +89,7 @@ words =
   [
     {"word" : { "fr" : "bonjour", "wo" : "naka suba si" }},
     {"word" : { "fr" : "bonsoir", "wo" : "naka ngon si" }},
-    {"word" : { "fr" : "bonne nuit", "wo" : "ñu fanane ak jamm" }},
+    {"word" : { "fr" : "bonne nuit", "wo" : "ñu fanane ak jamm"}},
     {"word" : { "fr" : "hello", "wo" : "naga def" }},
     {"word" : { "fr" : "こんにちは", "wo" : "naga def" }},
     {"word" : { "fr" : "un", "wo" : "benn" }},
