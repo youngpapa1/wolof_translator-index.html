@@ -163,7 +163,6 @@ words =
     {"word" : { "fr" : "8th", "wo" : "juróom-ñettéél"}},
     {"word" : { "fr" : "9th", "wo" : "juróom-ñeentéél"}},
     {"word" : { "fr" : "10th", "wo" : "fukkéél"}},
-<<<<<<< HEAD
     {"word" : { "fr" : "text_french", "wo" : "Mangi fii (rekk)."}},
     {"word" : { "fr" : "text_french", "wo" : "Yaangi ci jamm?"}},
     {"word" : { "fr" : "text_french", "wo" : ["jamm rekk, Alxamdulilaay"]}},
@@ -186,7 +185,6 @@ words =
     {"word" : { "fr" : "text_french", "wo" : "ba ci kanam"}},
     {"word" : { "fr" : "text_french", "wo" : "ba beneen (yoon)"}},
     {"word" : { "fr" : "text_french", "wo" : "jamm ak jamm"}},
-=======
     {"word" : { "fr" : "je vais bien", "wo" : "Mangi fii (rekk)."}},
     {"word" : { "fr" : "cava", "wo" : "Yaangi ci jamm?"}},
     {"word" : { "fr" : "je vais bien, Dieu merci", "wo" : ["jamm rekk, Alxamdulilaay"]}},
@@ -209,7 +207,6 @@ words =
     {"word" : { "fr" : "a tout a l'heure", "wo" : "ba ci kanam"}},
     {"word" : { "fr" : "a la prochaine", "wo" : "ba beneen (yoon)"}},
     {"word" : { "fr" : "bien des choses", "wo" : "jamm ak jamm"}},
->>>>>>> 72443803663a631b7a39072e9f9c90646f9a85a4
     {"word" : { "fr" : "Va", "wo" : "text_wolof"}},
     {"word" : { "fr" : "Cours", "wo" : "text_wolof"}},
     {"word" : { "fr" : "Courez ", "wo" : "text_wolof"}},
