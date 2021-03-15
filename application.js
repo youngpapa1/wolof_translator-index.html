@@ -6,6 +6,13 @@ var outputText = document.querySelector("#output-text");
 var wolofText = document.querySelector("#wolof-text");
 var frenchText = document.querySelector("#french-text");
 
+const fs = require('./require.js');
+
+fs.writeFile('edit.txt', content, error => {
+if (error) {
+console.error(error);
+return;
+}
 
 function getTranslationText(text){
   var texte ="";
@@ -18,7 +25,7 @@ function getTranslationText(text){
 
     if(words[i].word.fr.toLowerCase() == texte)
     {
-      textnode += "</ul>";
+      textnode += "</ol>";
       document.getElementById("list").innerHTML = textnode;
       outputText.innerText = words[i].word.wo;
       return true;
@@ -175,6 +182,7 @@ words =
     {"word" : { "fr" : "8th", "wo" : "juróom-ñettéél"}},
     {"word" : { "fr" : "9th", "wo" : "juróom-ñeentéél"}},
     {"word" : { "fr" : "10th", "wo" : "fukkéél"}},
+<<<<<<< HEAD
     {"word" : { "fr" : "text_french", "wo" : "Mangi fii (rekk)."}},
     {"word" : { "fr" : "text_french", "wo" : "Yaangi ci jamm?"}},
     {"word" : { "fr" : "text_french", "wo" : ["jamm rekk, Alxamdulilaay"]}},
@@ -197,6 +205,30 @@ words =
     {"word" : { "fr" : "text_french", "wo" : "ba ci kanam"}},
     {"word" : { "fr" : "text_french", "wo" : "ba beneen (yoon)"}},
     {"word" : { "fr" : "text_french", "wo" : "jamm ak jamm"}},
+=======
+    {"word" : { "fr" : "je vais bien", "wo" : "Mangi fii (rekk)."}},
+    {"word" : { "fr" : "cava", "wo" : "Yaangi ci jamm?"}},
+    {"word" : { "fr" : "je vais bien, Dieu merci", "wo" : ["jamm rekk, Alxamdulilaay"]}},
+    {"word" : { "fr" : "et la famille", "wo" : "Ana sa waa ker?"}},
+    {"word" : { "fr" : "tout le monde va bien", "wo" : "Ñunga fa."}},
+    {"word" : { "fr" : "combien coute celui la", "wo" : "(Bi) Ñaata (la)?"}},
+    {"word" : { "fr" : "c'est cher/rare", "wo" : "Dafa cher/jaffe."}},
+    {"word" : { "fr" : "diminue le", "wo" : "Waññi ko."}},
+    {"word" : { "fr" : "merci", "wo" : "jërejëf"}},
+    {"word" : { "fr" : "on est ensemble", "wo" : "Ñoo ko bokk."}},
+    {"word" : { "fr" : "oui", "wo" : "waaw"}},
+    {"word" : { "fr" : "non", "wo" : "déedéet"}},
+    {"word" : { "fr" : "j'ai faim", "wo" : "Dama xiif."}},
+    {"word" : { "fr" : "j'ai soif", "wo" : "Dama mar."}},
+    {"word" : { "fr" : "je suis fatigue", "wo" : "Dama sonn."}},
+    {"word" : { "fr" : "bien dormi?", "wo" : "Jamm ngam fanaan?"}},
+    {"word" : { "fr" : "bien, Dieu merci", "wo" : "jamm rekk, Alxamdulilaay"}},
+    {"word" : { "fr" : "et le matinal", "wo" : "Naka suba si?"}},
+    {"word" : { "fr" : "text_french", "wo" : "Suba si, sangi nii (rekk)."}},
+    {"word" : { "fr" : "a tout a l'heure", "wo" : "ba ci kanam"}},
+    {"word" : { "fr" : "a la prochaine", "wo" : "ba beneen (yoon)"}},
+    {"word" : { "fr" : "bien des choses", "wo" : "jamm ak jamm"}},
+>>>>>>> 72443803663a631b7a39072e9f9c90646f9a85a4
     {"word" : { "fr" : "Va", "wo" : "text_wolof"}},
     {"word" : { "fr" : "Cours", "wo" : "text_wolof"}},
     {"word" : { "fr" : "Courez ", "wo" : "text_wolof"}},
