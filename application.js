@@ -14,7 +14,7 @@ function getTranslationText(text){
 
     if(words[i].word.fr.toLowerCase() == texte)
     {
-      textnode += "</ul>";
+      textnode += "</ol>";
       document.getElementById("list").innerHTML = textnode;
       outputText.innerText = words[i].word.wo;
       return true;
