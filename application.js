@@ -37,7 +37,6 @@ $(document).on("click", '#btn_edit',function(e) {
             frenchText.innerText = frenchValue;
             wolofText.innerText = wolofValue;
         });
-        $("#edit_modal").modal('show');
 });
 
 function clickEventHandler(){
