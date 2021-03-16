@@ -9,36 +9,38 @@ var frenchText = document.querySelector("#french-text");
 
 function getTranslationText(text){
   var texte ="";
+  radio = "<p>";
   texte = text.toLowerCase().trim();
   outputText.innerText ="";
   for(var i = 0; i < words.length; i++)
   {
     if(words[i].word.fr.toLowerCase() == texte)
     {
-
-      radio += '<div class="form-check">';
-      radio += '<input class="form-check-input" type="radio" name="flexRadioDefault">';
-      radio += '<label class="form-check-label" for="flexRadioDefault1">'+ words[i].word.wo +'</label>';
-      radio += '<label class="form-check-label" for="flexRadioDefault1">'+ words[i].word.fr +'</label></input></div>';
+      radio += '<label><input type="radio" name="wolof" value="wolof">'+ words[i].word.wo +'</label>';
+      radio += '<label><input type="radio" name="french" value="french">'+ words[i].word.fr +'</label>';
       document.getElementById("radio_list").innerHTML = radio;
       outputText.innerText = words[i].word.wo;
       return true;
     }
 
   }
-
-  document.getElementById("list").innerHTML = radio;
+  radio += "</p>";
+  document.getElementById("radio_list").innerHTML = radio;
   outputText.innerText ="Select a word in this list below!";
 
   return false;
 }
-
-function errorHandler(error){
-    console.log("error occured",error)
-}
+$(document).on("click", '#btn_edit',function(e) {
+    $("input[type='button']").click(function(){
+            var frenchValue = $("input[name='french']:checked").val();
+            var wolofValue = $("input[name='wolof']:checked").val();
+            frenchText.innerText = frenchValue;
+            wolofText.innerText = wolofValue;
+        });
+        $("#edit_modal").modal('show');
+});
 
 function clickEventHandler(){
-
     var inputTxt = inputText.value;
     getTranslationText(inputTxt);
 
@@ -76,12 +78,12 @@ function editTranslationText(text_wolof, text_french){
 }
 
 function saveText(inputWo_Txt, inputFr_Txt){
-
   const data =  { word : { fr : inputFr_Txt, wo : inputWo_Txt}};              //sample json
   const a = document.createElement('a');
   const blob = new Blob([JSON.stringify(data)]);
   a.href = URL.createObjectURL(blob);
   a.download = 'edit.txt';                     //filename to download
+  $("#edit_modal").modal('hide');
   a.click();
 }
 
