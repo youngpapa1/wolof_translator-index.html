@@ -16,11 +16,11 @@ table += '<th class="pt-3-half" contenteditable="true">FRENCH</th>';
 table += '</tr>';
 table += '</thead>';
 table += '<tbody>';
+$(document).ready(function(){
+       create();
+     });
 
-function getTranslationText(text){
-  var texte ="";
-  texte = text.toLowerCase().trim();
-  outputText.innerText ="";
+function create(){
   for(var i = 0; i < words.length; i++)
   {
 
@@ -29,17 +29,26 @@ function getTranslationText(text){
     table +='<td>'+ words[i].word.wo +'</td>'
     table +='<td>'+ words[i].word.fr +'</td>'
     table +='</tr>'
+  }
+  table += '</tbody></table>'
+  document.getElementById("radio_list").innerHTML = table;
+}
+
+function getTranslationText(text){
+  var texte ="";
+  texte = text.toLowerCase().trim();
+  outputText.innerText ="";
+  for(var i = 0; i < words.length; i++)
+  {
+
 
     if(words[i].word.fr.toLowerCase() == texte)
     {
       outputText.innerText = words[i].word.wo;
+      return true;
     }
 
   }
-  table += '</tbody></table>'
-  document.getElementById("radio_list").innerHTML = table;
-
-
   return false;
 }
 $("input[name='french']").click(function(){
