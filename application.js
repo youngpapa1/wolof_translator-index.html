@@ -7,15 +7,15 @@ var wolofText = document.querySelector("#wolof-text");
 var frenchText = document.querySelector("#french-text");
 
 table = "";
-table += '<table class="table table-bordered table-responsive-md table-striped text-left">'
-table += '<thead class="thead-dark">'
-table += '<tr>'
-table += '<th class="pt-3-half" contenteditable="true">#</th>'
-table += '<th class="pt-3-half" contenteditable="true">WOLOF</th>'
-table += '<th class="pt-3-half" contenteditable="true">FRENCH</th>'
-table += '</tr>'
-table += '</thead>'
-table += '<tbody>'
+table += '<table class="table table-bordered table-responsive-md table-striped text-left">';
+table += '<thead class="thead-dark">';
+table += '<tr>';
+table += '<th class="pt-3-half" contenteditable="true">#</th>';
+table += '<th class="pt-3-half" contenteditable="true">WOLOF</th>';
+table += '<th class="pt-3-half" contenteditable="true">FRENCH</th>';
+table += '</tr>';
+table += '</thead>';
+table += '<tbody>';
 
 function getTranslationText(text){
   var texte ="";
