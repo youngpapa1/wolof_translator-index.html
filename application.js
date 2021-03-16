@@ -6,38 +6,51 @@ var outputText = document.querySelector("#output-text");
 var wolofText = document.querySelector("#wolof-text");
 var frenchText = document.querySelector("#french-text");
 
+table = "";
+table += '<table class="table table-bordered table-responsive-md table-striped text-left">'
+table += '<thead class="thead-dark">'
+table += '<tr>'
+table += '<th class="pt-3-half" contenteditable="true">#</th>'
+table += '<th class="pt-3-half" contenteditable="true">WOLOF</th>'
+table += '<th class="pt-3-half" contenteditable="true">FRENCH</th>'
+table += '</tr>'
+table += '</thead>'
+table += '<tbody>'
 
 function getTranslationText(text){
   var texte ="";
-  radio = "<p>";
   texte = text.toLowerCase().trim();
   outputText.innerText ="";
   for(var i = 0; i < words.length; i++)
   {
-   radio += '<label><input type="radio" name="wolof" value="wolof">'+ words[i].word.wo +'</label>';
-   radio += '<label><input type="radio" name="french" value="french">'+ words[i].word.fr +'</label>';
-   radio += "<br>";
-   //document.getElementById("radio_list").innerHTML = radio;
-      
+
+    table +='<tr>'
+    table +='<th scope="row">'+i+'</th>'
+    table +='<td>'+ words[i].word.wo +'</td>'
+    table +='<td>'+ words[i].word.fr +'</td>'
+    table +='</tr>'
+
     if(words[i].word.fr.toLowerCase() == texte)
     {
       outputText.innerText = words[i].word.wo;
     }
 
   }
-  radio += "</p>";
-  document.getElementById("radio_list").innerHTML = radio;
-  //outputText.innerText ="Select a word in this list below!";
+  table += '</tbody></table>'
+  document.getElementById("radio_list").innerHTML = table;
+
 
   return false;
 }
+$("input[name='french']").click(function(){
+  var frenchValue = $("input[name='french']:checked").val();
+  frenchText.innerText = frenchValue;
+});
+$("input[name='wolof']").click(function(){
+var wolofValue = $("input[name='wolof']:checked").val();
+wolofText.innerText = wolofValue;
+});
 $(document).on("click", '#btn_edit',function(e) {
-    $("input[type='button']").click(function(){
-            var frenchValue = $("input[name='french']:checked").val();
-            var wolofValue = $("input[name='wolof']:checked").val();
-            frenchText.innerText = frenchValue;
-            wolofText.innerText = wolofValue;
-        });
 });
 
 function clickEventHandler(){
