@@ -14,19 +14,20 @@ function getTranslationText(text){
   outputText.innerText ="";
   for(var i = 0; i < words.length; i++)
   {
+   radio += '<label><input type="radio" name="wolof" value="wolof">'+ words[i].word.wo +'</label>';
+   radio += '<label><input type="radio" name="french" value="french">'+ words[i].word.fr +'</label>';
+   radio += "<br>";
+   //document.getElementById("radio_list").innerHTML = radio;
+      
     if(words[i].word.fr.toLowerCase() == texte)
     {
-      radio += '<label><input type="radio" name="wolof" value="wolof">'+ words[i].word.wo +'</label>';
-      radio += '<label><input type="radio" name="french" value="french">'+ words[i].word.fr +'</label>';
-      document.getElementById("radio_list").innerHTML = radio;
       outputText.innerText = words[i].word.wo;
-      return true;
     }
 
   }
   radio += "</p>";
   document.getElementById("radio_list").innerHTML = radio;
-  outputText.innerText ="Select a word in this list below!";
+  //outputText.innerText ="Select a word in this list below!";
 
   return false;
 }
