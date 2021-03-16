@@ -6,6 +6,7 @@ var outputText = document.querySelector("#output-text");
 var wolofText = document.querySelector("#wolof-text");
 var frenchText = document.querySelector("#french-text");
 
+
 function getTranslationText(text){
   var texte ="";
   var textnode = "<ol>";
@@ -14,11 +15,15 @@ function getTranslationText(text){
   for(var i = 0; i < words.length; i++)
   {
     textnode += "<li>" + words[i].word.fr + "</li>";
-
     if(words[i].word.fr.toLowerCase() == texte)
     {
       textnode += "</ol>";
-      document.getElementById("list").innerHTML = textnode;
+
+      radio += '<div class="form-check">';
+      radio += '<input class="form-check-input" type="radio" name="flexRadioDefault">';
+      radio += '<label class="form-check-label" for="flexRadioDefault1">'+ words[i].word.wo +'</label>';
+      radio += '<label class="form-check-label" for="flexRadioDefault1">'+ words[i].word.fr +'</label></input></div>';
+      document.getElementById("radio_list").innerHTML = radio;
       outputText.innerText = words[i].word.wo;
       return true;
     }
