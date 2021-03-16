@@ -17,10 +17,10 @@ table += '</tr>';
 table += '</thead>';
 table += '<tbody>';
 $(document).ready(function(){
-       create();
-     });
+createTable();
+});
 
-function create(){
+function createTable(){
   for(var i = 0; i < words.length; i++)
   {
 
@@ -31,7 +31,7 @@ function create(){
     table +='</tr>'
   }
   table += '</tbody></table>'
-  document.getElementById("radio_list").innerHTML = table;
+  document.getElementById("table").innerHTML = table;
 }
 
 function getTranslationText(text){
@@ -40,8 +40,6 @@ function getTranslationText(text){
   outputText.innerText ="";
   for(var i = 0; i < words.length; i++)
   {
-
-
     if(words[i].word.fr.toLowerCase() == texte)
     {
       outputText.innerText = words[i].word.wo;
